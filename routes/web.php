@@ -26,12 +26,15 @@ Route::get('/', function () {
 Route::get('/', [TipoAsientoController::class, 'inicio'] )->name('tipoAsiento.inicio');
 Route::get('/tipoAsientos/home', [TipoAsientoController::class, 'index'] )->name('asiento.home');
 
-
 Route::get('/tipoAsientos',[TipoAsientoController::class, 'agregar'] )->name('tipoAsiento.agregar');
 
-Route::post('/tipoAsientos/agregar', [TipoAsientoController::class, 'guardar'] )->name('tipoAsiento.guardar');
+Route::post('/tipoAsientos/guardar', [TipoAsientoController::class, 'guardar'] )->name('tipoAsiento.guardar');
 
-Route::get('/vuelos', [VueloController::class, 'mostrar'] )->name('vuelos.mostrar');
+Route::get('/vuelos/mostrar', [VueloController::class, 'mostrar'] )->name('vuelos.mostrar');
+
+Route::get('/vuelos/guardar', [VueloController::class, 'guardar'] )->name('vuelos.guardar');
+
+Route::get('/vuelos/editar', [VueloController::class, 'editar'] )->name('vuelos.editar');
  
 
 

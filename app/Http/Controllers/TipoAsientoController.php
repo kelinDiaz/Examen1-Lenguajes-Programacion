@@ -32,9 +32,9 @@ public function guardar(Request $request){
     $TipoAsientos->descripcion = $request->input('descripcion');
     $TipoAsientos->precio = $request->input('precio');
     $TipoAsientos->estado = $request->input('estado');
-     $TipoAsientos->save();
+    $TipoAsientos->save();
   
-
+$TipoAsientos = TipoAsiento::all();
  return view('/');
      
 

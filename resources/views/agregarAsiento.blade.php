@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,37 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tipos de Asientos</title>
+    <title>Vuelos</title>
 </head>
 <body>
     <div class="container">
         
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h2>Crear Tipo Asiento</h2>
+                <h2>Agregar asiento a vuelo</h2>
                 <br>
-                <form action="{{route('tipoAsiento.guardar')}}"  method="POST">
+                <div class="form-group">
+                    <label for="metros">N&uacute;mero Vuelo</label>
+                    <input type="text"class="form-control" value = "CM385" readonly/>
+                </div>
 
-                    @csrf
-                    @method('POST')
+                <div class="form-group">
+                    <label for="metros">Fecha Vuelo</label>
+                    <input type="date"class="form-control" readonly/>
+                </div>
+
+
+                <form >
                     <div class="form-group">
-                        <label for="descripcion">Descripcion:</label>
+                        <label for="color">Numero Asiento:</label>
                         <input type="text" class="form-control" />
                     </div>
-                    <div class="form-group">
-                        <label for="precio">Precio</label>
-                        <input type="text"class="form-control"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="estado">Estado:</label>
-                        <input type="text" class="form-control"/>
-                    </div>
 
+                    <div class="form-group">
+                        <label for="color">Id Tipo Asiento:</label>
+                        <input type="text" class="form-control" />
+                    </div>
                     
                     <br>
                     <div class="form-group">
-                        <a href="{{route('asiento.home')}}" class="btn btn-warning">Volver</a>
-                        <button type="submit" class="btn btn-success">Guardar</button>                        
+                        <a class="btn btn-warning">Volver</a>
+                        <button type="submit" class="btn btn-success">Guardar</button>
                     </div>
                 </form>
             </div>

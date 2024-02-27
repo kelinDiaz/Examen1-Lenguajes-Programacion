@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,37 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tipos de Asientos</title>
+    <title>Vuelos</title>
 </head>
 <body>
     <div class="container">
         
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h2>Crear Tipo Asiento</h2>
+                <h2>Editar Vuelo</h2>
                 <br>
-                <form action="{{route('tipoAsiento.guardar')}}"  method="POST">
-
-                    @csrf
-                    @method('POST')
+                <form >
                     <div class="form-group">
-                        <label for="descripcion">Descripcion:</label>
-                        <input type="text" class="form-control" />
+                        <label for="color">Numero:</label>
+                        <input type="text" class="form-control" readonly/>
                     </div>
                     <div class="form-group">
-                        <label for="precio">Precio</label>
+                        <label for="metros">Origen</label>
                         <input type="text"class="form-control"/>
                     </div>
                     <div class="form-group">
-                        <label for="estado">Estado:</label>
+                        <label for="tipoPropiedad">Destino:</label>
                         <input type="text" class="form-control"/>
                     </div>
-
-                    
                     <br>
                     <div class="form-group">
-                        <a href="{{route('asiento.home')}}" class="btn btn-warning">Volver</a>
-                        <button type="submit" class="btn btn-success">Guardar</button>                        
+                        <a class="btn btn-warning">Volver</a>
+                        <button type="submit" class="btn btn-success">Guardar</button>
                     </div>
                 </form>
             </div>
