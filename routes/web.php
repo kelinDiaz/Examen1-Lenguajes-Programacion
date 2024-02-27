@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\TipoAsientoController;
+use App\Http\Controllers\VueloAsientoController;
+use App\Http\Controllers\VueloController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+ 
+Route::get('/', [TipoAsientoController::class, 'inicio'] )->name('tipoAsiento.inicio');
+Route::get('/tipoAsientos/home', [TipoAsientoController::class, 'index'] )->name('asiento.home');
+
+
+Route::get('/tipoAsientos',[TipoAsientoController::class, 'agregar'] )->name('tipoAsiento.agregar');
+
+Route::post('/tipoAsientos/agregar', [TipoAsientoController::class, 'guardar'] )->name('tipoAsiento.guardar');
+
+Route::get('/vuelos', [VueloController::class, 'mostrar'] )->name('vuelos.mostrar');
+ 
+
+

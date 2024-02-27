@@ -8,4 +8,10 @@ use Illuminate\Http\Request;
 class VueloController extends Controller
 {
     //
+
+public function mostrar() {
+    return view('vuelos');
+
+
+}
 }
